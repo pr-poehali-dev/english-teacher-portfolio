@@ -14,27 +14,6 @@ const Index = () => {
     }
   };
 
-  const achievements = [
-    {
-      icon: 'GraduationCap',
-      title: 'Cambridge CELTA',
-      organization: 'University of Cambridge',
-      year: '2020'
-    },
-    {
-      icon: 'Award',
-      title: 'TESOL Certificate',
-      organization: 'Arizona State University',
-      year: '2019'
-    },
-    {
-      icon: 'Globe',
-      title: 'IELTS Examiner',
-      organization: 'British Council',
-      year: '2021'
-    }
-  ];
-
   const qualifications = [
     {
       degree: 'Бакалавр педагогических наук',
@@ -51,7 +30,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-serif font-bold text-primary">English Teacher Portfolio</h1>
             <div className="hidden md:flex gap-6">
-              {['home', 'about', 'qualifications', 'achievements', 'contact'].map((section) => (
+              {['home', 'about', 'qualifications', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -62,7 +41,6 @@ const Index = () => {
                   {section === 'home' && 'Главная'}
                   {section === 'about' && 'Обо мне'}
                   {section === 'qualifications' && 'Квалификация'}
-                  {section === 'achievements' && 'Достижения'}
                   {section === 'contact' && 'Контакты'}
                 </button>
               ))}
@@ -133,29 +111,6 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="achievements" className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-serif font-bold text-primary mb-4 text-center">Достижения и сертификаты</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            Международные сертификации и профессиональные достижения
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-2">
-                <CardContent className="p-8 text-center space-y-4">
-                  <div className="bg-gradient-to-br from-primary to-accent p-6 rounded-full w-20 h-20 mx-auto flex items-center justify-center">
-                    <Icon name={achievement.icon as any} size={40} className="text-white" />
-                  </div>
-                  <h3 className="text-xl font-serif font-bold text-primary">{achievement.title}</h3>
-                  <p className="text-muted-foreground">{achievement.organization}</p>
-                  <p className="text-sm font-semibold text-accent">{achievement.year}</p>
                 </CardContent>
               </Card>
             ))}
