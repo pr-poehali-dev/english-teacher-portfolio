@@ -85,7 +85,7 @@ const Index = () => {
                 Профессиональное преподавание английского языка
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Опытный преподаватель с международной сертификацией и индивидуальным подходом к каждому студенту
+                Преподаватель английского языка с индивидуальным подходом к каждому ученику
               </p>
               <div className="flex gap-4">
                 <Button onClick={() => scrollToSection('contact')} size="lg" className="text-base">
